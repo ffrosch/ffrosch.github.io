@@ -1,3 +1,6 @@
+@import url("fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Arvo:700");
+
 /* http://meyerweb.com/eric/tools/css/reset/
 v2.0 | 20110126
 License: none (public domain)
@@ -125,4 +128,107 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+body,
+input,
+textarea,
+select,
+figcaption {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  color: #777;
+}
+
+/* Start Header */
+
+#header {
+  margin: 3em 0 2em 0;
+}
+
+#header h1 {
+  color: rgb(237, 120, 106);
+  font-family: "Arvo", serif;
+  font-size: 3em;
+  letter-spacing: 0.2em;
+  text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+}
+
+#header p {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #888;
+  margin: 2.5em 0 0 0;
+  font-size: 0.85em;
+  letter-spacing: 3px;
+  text-align: center;
+  margin: 2.5em 0 0 0;
+}
+
+/* End Header */
+
+.container {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  min-width: 400px;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 400px;
+}
+
+/* Start Website Preview Card */
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  height: 200px;
+  flex: 0 0 300px;
+  overflow: hidden;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  opacity: 0.75;
+}
+
+.card-image {
+  width: 300px;
+  height: 170px;
+  object-fit: cover;
+  object-position: 0 0;
+  border-radius: 5px;
+}
+
+.card-caption {
+  text-align: center;
+}
+
+/* End Website Preview Card */
+
+#header {
+  text-align: center;
+  flex: 1 0 400px;
+}
+
+footer.container {
+  margin: 64px;
 }
