@@ -191,18 +191,20 @@ figcaption {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .card {
-  height: 200px;
   flex: 0 0 300px;
   overflow: hidden;
   transition: 0.3s;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: stretch;
   align-items: center;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
+  margin: 16px;
+  border-radius: 3%;
 }
 
 .card:hover {
@@ -215,11 +217,12 @@ figcaption {
   height: 170px;
   object-fit: cover;
   object-position: 0 0;
-  border-radius: 5px;
 }
 
 .card-caption {
+  width: 100%;
   text-align: center;
+  line-height: 3em;
 }
 
 /* End Website Preview Card */
