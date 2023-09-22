@@ -229,6 +229,7 @@ figcaption {
   flex: 1 0 400px;
 }
 
-footer.container {
-  margin: 64px;
+#footer {
+  margin-top: 64px;
+  margin-bottom: 16px;
 }
