@@ -188,13 +188,15 @@ figcaption {
 
 /* Start Website Preview Card */
 
-.cards {
+ul.cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  list-style: none;
 }
 
 .card {
+  position: relative;
   flex: 0 0 300px;
   overflow: hidden;
   transition: 0.3s;
@@ -202,14 +204,28 @@ figcaption {
   flex-direction: column;
   justify-content: stretch;
   align-items: center;
+  text-align: center;
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
   margin: 16px;
   border-radius: 3%;
+  line-height: 1em;
 }
 
 .card:hover {
   transform: scale(1.05);
   opacity: 0.75;
+}
+
+.card > *:not(img) {
+  margin: 0.5em;
+}
+
+.card > *:nth-child(2) {
+  margin-top: 1em;
+}
+
+.card > *:last-child {
+  margin-bottom: 2em;
 }
 
 .card-image {
@@ -220,9 +236,23 @@ figcaption {
 }
 
 .card-caption {
-  width: 100%;
-  text-align: center;
-  line-height: 3em;
+  font-size: larger;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #888;
+}
+
+/* Make the whole card clickable
+Required the parent to have "position: relative" */
+.card-link:after {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: " ";
 }
 
 /* End Website Preview Card */
